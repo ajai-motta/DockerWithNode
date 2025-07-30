@@ -1,3 +1,4 @@
-FROM alpine
-RUN apk add --update redis
-CMD ["redis-server"]
+FROM node:18-alpine
+COPY ./ ./
+RUN npm install
+CMD ["npm", "start"]
